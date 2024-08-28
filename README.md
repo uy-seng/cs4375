@@ -1,3 +1,1 @@
-# cs4375
-# cs4375
-# cs4375
+# CS 4375: Introduction to Machine Learning
