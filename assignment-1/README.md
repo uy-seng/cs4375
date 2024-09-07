@@ -1,3 +1,6 @@
+# Installing packages
+please run `python install -r requirements.txt` or `python3 install -r requirements.txt` to install the necessary packages for running the program.
+
 # Running Part 1
 1. run `python part1.py` or `python3 part1.py`
 
