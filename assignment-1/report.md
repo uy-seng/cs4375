@@ -190,3 +190,18 @@ Below is the results we have:
 We notice that ```learning_rate=optimal``` is not good at all because it yield us negative R2 score. The best parameter that we found is ```'alpha': 0.0001, 'learning_rate': 'adaptive', 'max_iter': 1000, 'tol': 0.001``` with R2 score of ```0.5282258489110061```.
 
 Comparing this model to the model that we built from scratch, we notice that they both have similar performance and yield similar R2 results. However, the SGDRegressor needed less iterations and tolerance in order to achieve good results compared to the model that we built. This shows that there might be more optimization that we can do to improve our linear regression model.
+
+From the table above, we can generate the following graphs:
+
+![R2 Heatmap for Learning Rate and Max Iterations](https://github.com/uy-seng/cs4375/blob/main/assignment-1/graphs/r2score_heatmap_learning_rate_vs_max_iterations.png?raw=true "R2 Heatmap for Learning Rate and Max Iterations")
+*In this graph, we notice that the inverse relationship of learning rate. It proves that we do not choose the smallest learning rate but the optimal one.*
+
+![R2 Score vs Max Interations for Different Learning Rate](https://github.com/uy-seng/cs4375/blob/main/assignment-1/graphs/r2vsmax_iterations.png?raw=true "R2 Score vs Max Interations for Different Learning Rate")
+*In this graph, we notice that the R2 score starts going constant starting from 10,000 iterations for our optimal learning rate*
+
+![R2 Score vs Threshold for Different Learning Rate](https://github.com/uy-seng/cs4375/blob/main/assignment-1/graphs/r2vsthreshold.png?raw=true "R2 Score vs Threshold for Different Learning Rate")
+*In this graph, the r2 does not change even when the threshold goes smaller than the optimal point. This means that once we reach the optimal point of a parameter, decreasing or increasing it further does not enhance or change the results.*
+
+# 4. Conclusions
+
+In my conclusion, even if the R2 score seems okay, there is a much better approach than pure linear regression to solve this problem. Having a slightly lower R2 score indicates that the dataset might not fit in a linear model and that we should explore other options that aligns more with the nature of the dataset itself.
