@@ -1,0 +1,5 @@
+ucimlrepo
+tensorflow
+keras
+scikit-learn
+matplotlib
